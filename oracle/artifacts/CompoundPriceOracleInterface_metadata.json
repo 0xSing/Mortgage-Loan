@@ -1,0 +1,235 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "symbol",
+						"type": "string"
+					}
+				],
+				"name": "getTokenConfigBySymbol",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "cToken",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "underlying",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "symbolHash",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint256",
+								"name": "baseUnit",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum CompoundPriceOracleInterface.PriceSource",
+								"name": "priceSource",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fixedPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "uniswapMarket",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "isUniswapReversed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct CompoundPriceOracleInterface.CTokenConfig",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "underlying",
+						"type": "address"
+					}
+				],
+				"name": "getTokenConfigByUnderlying",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "cToken",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "underlying",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "symbolHash",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint256",
+								"name": "baseUnit",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum CompoundPriceOracleInterface.PriceSource",
+								"name": "priceSource",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fixedPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "uniswapMarket",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "isUniswapReversed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct CompoundPriceOracleInterface.CTokenConfig",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "cToken",
+						"type": "address"
+					}
+				],
+				"name": "getUnderlyingPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"oracle/DeveloperLendPriceProviderV1.sol": "CompoundPriceOracleInterface"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0x8895ce4f46aba18ee3cdb7b1d180f79edb868225781f60993c7b2181e2ee2583",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4472c14df5f311d7a2eff1dfa55d9b4d39a21b0a0ff905fcbbf6913551086a4c",
+				"dweb:/ipfs/QmQvwFk1SBaLMm4pmZCz7UEhfaXM8kUWu5VG71VFFuMxjF"
+			]
+		},
+		"openzeppelin/ContextUpgradeable.sol": {
+			"keccak256": "0xc29069c2b260183319e21559976a4edd6353a239df21132bf9db532799d22903",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0ecc35cbe1827dc94d025e59c1ac18e27689433c444c3047b754a82d592dc6ed",
+				"dweb:/ipfs/QmZL53cPxx8wk27PfdZTKYZ7PKKjTuQKnur351JwEPzq5f"
+			]
+		},
+		"openzeppelin/Initializable.sol": {
+			"keccak256": "0x158043e9a2bd106a5ccfd0cc2d87d705a9b2b0bcb7922db4a19ea8e404064956",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f4f602e102ea8cf30c7d863c753323da6c63f93d74712f723cf12dc482f43cac",
+				"dweb:/ipfs/QmNi7w2v2UvjsKMSjv1jLeyfQTXHBheJjNvRTGHpjfjm9G"
+			]
+		},
+		"openzeppelin/OwnableUpgradeable.sol": {
+			"keccak256": "0xce73c27b03716341ac65d1c47f118be94ac41736d381169e1152785f81eac535",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://013d397cf7035aa123b2849bfd1b2a15949e8f7b1e698eb2a0b5e93b8a74fd33",
+				"dweb:/ipfs/QmZ4uzR9yhZpMC852qc9NibDsFmUggR8UfCNBTH1eC4iJ5"
+			]
+		},
+		"openzeppelin/SafeMath.sol": {
+			"keccak256": "0xa8bdeb6000645c8cd0d040fd429614de694ff281b8a1b78fb1f24ab899b2bec5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://635614feaf4b4a5467abb0231d4d5dd9d39597ea7f8af623dc60074495d1ae61",
+				"dweb:/ipfs/QmNfJL51eQP4wjzebecJQxwC5FkqMz8cWQ61Cfx2xsN8yQ"
+			]
+		},
+		"oracle/DeveloperLendPriceOracleInterface.sol": {
+			"keccak256": "0x75f26c72d309971e6b75cff5e8d84409495636fd0b35f8cc0393d1d5dc676406",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2946f34e79c5e3fca762c77154c61085ddcc83b4d82f93a4e88315d733ebed95",
+				"dweb:/ipfs/QmPdKriPao2ce48wyGrSZB47sk2GmJZghPRx6xrQgb6Urp"
+			]
+		},
+		"oracle/DeveloperLendPriceProviderV1.sol": {
+			"keccak256": "0x6e7822e837a2450cc701ac4910cb1f4206b6dee9af988744138c80babd2d5c7a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5b03ae3cd2d51a52d6cbf3c7d91366586cc7dffa9382a6556371c782e002ebf2",
+				"dweb:/ipfs/QmbqvkSstejNDJ5Lf9GuwejorjJGXznMnTcDeuqEf8XDau"
+			]
+		}
+	},
+	"version": 1
+}

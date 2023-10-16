@@ -1,0 +1,466 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "baseRatePerBlock",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "multiplierPerBlock",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "jumpMultiplierPerBlock",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "kink",
+						"type": "uint256"
+					}
+				],
+				"name": "NewInterestParams",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "baseRatePerBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "blocksPerYear",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "cash",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "borrows",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reserves",
+						"type": "uint256"
+					}
+				],
+				"name": "getBorrowRate",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "cash",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "borrows",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reserves",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reserveFactorMantissa",
+						"type": "uint256"
+					}
+				],
+				"name": "getSupplyRate",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "baseRatePerYear",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "multiplierPerYear",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "jumpMultiplierPerYear",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "kink_",
+						"type": "uint256"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "jumpMultiplierPerBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "kink",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "multiplierPerBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "baseRatePerYear",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "multiplierPerYear",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "jumpMultiplierPerYear",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "kink_",
+						"type": "uint256"
+					}
+				],
+				"name": "updateJumpRateModel",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "cash",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "borrows",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reserves",
+						"type": "uint256"
+					}
+				],
+				"name": "utilizationRate",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Arr00",
+			"kind": "dev",
+			"methods": {
+				"getBorrowRate(uint256,uint256,uint256)": {
+					"params": {
+						"borrows": "The amount of borrows in the market",
+						"cash": "The amount of cash in the market",
+						"reserves": "The amount of reserves in the market"
+					},
+					"returns": {
+						"_0": "The borrow rate percentage per block as a mantissa (scaled by 1e18)"
+					}
+				},
+				"getSupplyRate(uint256,uint256,uint256,uint256)": {
+					"params": {
+						"borrows": "The amount of borrows in the market",
+						"cash": "The amount of cash in the market",
+						"reserveFactorMantissa": "The current reserve factor for the market",
+						"reserves": "The amount of reserves in the market"
+					},
+					"returns": {
+						"_0": "The supply rate percentage per block as a mantissa (scaled by 1e18)"
+					}
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				},
+				"updateJumpRateModel(uint256,uint256,uint256,uint256)": {
+					"params": {
+						"baseRatePerYear": "The approximate target base APR, as a mantissa (scaled by 1e18)",
+						"jumpMultiplierPerYear": "The multiplierPerBlock after hitting a specified utilization point",
+						"kink_": "The utilization point at which the jump multiplier is applied",
+						"multiplierPerYear": "The rate of increase in interest rate wrt utilization (scaled by 1e18)"
+					}
+				},
+				"utilizationRate(uint256,uint256,uint256)": {
+					"params": {
+						"borrows": "The amount of borrows in the market",
+						"cash": "The amount of cash in the market",
+						"reserves": "The amount of reserves in the market (currently unused)"
+					},
+					"returns": {
+						"_0": "The utilization rate as a mantissa between [0, 1e18]"
+					}
+				}
+			},
+			"title": "Compound's JumpRateModel Contract V2 for V2 cTokens",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"baseRatePerBlock()": {
+					"notice": "The base interest rate which is the y-intercept when utilization rate is 0"
+				},
+				"blocksPerYear()": {
+					"notice": "The approximate number of blocks per year that is assumed by the interest rate model"
+				},
+				"getBorrowRate(uint256,uint256,uint256)": {
+					"notice": "Calculates the current borrow rate per block"
+				},
+				"getSupplyRate(uint256,uint256,uint256,uint256)": {
+					"notice": "Calculates the current supply rate per block"
+				},
+				"jumpMultiplierPerBlock()": {
+					"notice": "The multiplierPerBlock after hitting a specified utilization point"
+				},
+				"kink()": {
+					"notice": "The utilization point at which the jump multiplier is applied"
+				},
+				"multiplierPerBlock()": {
+					"notice": "The multiplier of utilization rate that gives the slope of the interest rate"
+				},
+				"updateJumpRateModel(uint256,uint256,uint256,uint256)": {
+					"notice": "Update the parameters of the interest rate model (only callable by owner, i.e. Timelock)"
+				},
+				"utilizationRate(uint256,uint256,uint256)": {
+					"notice": "Calculates the utilization rate of the market: `borrows / (cash + borrows - reserves)`"
+				}
+			},
+			"notice": "Supports only for V2 cTokens",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"rate/JumpRateModel.sol": "JumpRateModel"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol": {
+			"keccak256": "0xe81686511d62f18b2d9c693c2c94c0a789c690de63aa90e15451ebf65c5bfd3e",
+			"urls": [
+				"bzz-raw://1332ee1d2b096456bf2e5795b5871d0fed47be6a31c9a2f2cef9206a299565ea",
+				"dweb:/ipfs/Qmdu1847Y4UL3gTjbLUManMGfxYEoyGPSodM3Br89SKzwx"
+			]
+		},
+		"@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol": {
+			"keccak256": "0x9bfec92e36234ecc99b5d37230acb6cd1f99560233753162204104a4897e8721",
+			"urls": [
+				"bzz-raw://5cf7c208583d4d046d75bd99f5507412ab01cce9dd9f802ce9768a416d93ea2f",
+				"dweb:/ipfs/QmcQS1BBMPpVEkXP3qzwSjxHNrqDek8YeR7xbVWDC9ApC7"
+			]
+		},
+		"@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol": {
+			"keccak256": "0x04a69a78363214b4e3055db8e620bed222349f0c81e9d1cbe769eb849b69b73f",
+			"urls": [
+				"bzz-raw://b3115459376196d6c2c3817439c169d9b052b27b70e8ee2e28963cda760736da",
+				"dweb:/ipfs/QmXaNF5rmcDSAzBiFMQjf979qb9xNXqD9eZtgo4uM9VEis"
+			]
+		},
+		"@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol": {
+			"keccak256": "0x04d34b3cd5677bea25f8dfceb6dec0eaa071d4d4b789a43f13fe0c415ba4c296",
+			"urls": [
+				"bzz-raw://e7e8b526a6839e5ba14f0d23a830387fec47f7043ce01d42c9f285b709a9d080",
+				"dweb:/ipfs/QmXmhhFmX5gcAvVzNiDPAGA35iHMPNaYtQkACswRHBVTNw"
+			]
+		},
+		"rate/BaseJumpRateModel.sol": {
+			"keccak256": "0xa4c8ea5fc74bbc9dc0baf62cfcc4f8001b82f4b5260c981d069637128d39efa3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fa51a37550330a8d8ad5c316f602a07751958093eb10377a9359f49d882a82ce",
+				"dweb:/ipfs/Qma435Cs8gUpvgFhoKcgb656Q7r98e3rhCr6nxbfJHMVtG"
+			]
+		},
+		"rate/IInterestRateModel.sol": {
+			"keccak256": "0x2966eac6888c8dc2a8aadef2e30de55be0d28e9e4960afdfc7d6b81dc18480bd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e323b32256b207682d1379149e9200eb318fa76e423a164524e0adc63473d3a9",
+				"dweb:/ipfs/Qme5dfdoGV9jaB6Ay6krLPTmaavtmCFBexBSjeUhq8YpSC"
+			]
+		},
+		"rate/JumpRateModel.sol": {
+			"keccak256": "0xc521eb8c54396a57cbec6efd33b198540b5be158c3ff1a3f3ab2443731717fc2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://99a4ea49cf3a0da28246b8937600611169112c6d74fba7b5811ef6d11d39d9d1",
+				"dweb:/ipfs/QmSX5DEXFz7setJwcS21gYPfpPLsMnqASCTtFM6KRx7zAC"
+			]
+		}
+	},
+	"version": 1
+}
